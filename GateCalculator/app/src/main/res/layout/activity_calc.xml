@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gatehelpline.apoorva.myapplication.myapplication.Calc"
+    android:touchscreenBlocksFocus="false"
+    android:background="#FF969E99"
+    android:keepScreenOn="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:drawable/editbox_background"
+        android:layout_margin="3dp"
+        android:layout_gravity="center"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:id="@+id/editText_1"
+            android:gravity="right"
+            android:enabled="false"
+            android:background="@android:drawable/dialog_holo_light_frame"
+            android:paddingEnd="15dp"
+            android:paddingStart="15dp"
+            android:textColor="#FF000000"
+            android:text=" "
+            android:singleLine="true"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:id="@+id/editText_2"
+            android:gravity="right"
+            android:enabled="false"
+            android:background="@android:drawable/dialog_holo_light_frame"
+            android:text=" 0"
+            android:paddingEnd="15dp"
+            android:paddingStart="15dp"
+            android:textColor="#FF000000"
+            android:singleLine="true" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:gravity="end">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0">
+                    <Button
+
+                        android:text="mod"
+                        android:id="@+id/mod"
+                        style="@style/FullscreenThemeButton"
+                        android:layout_weight="1"
+                        android:onClick="putMod" />
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:text="@string/degree"
+                            android:id="@+id/degButton"
+                            android:layout_weight="1"
+                            android:textColor="#000"
+                            android:checked="true" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:text="@string/radian"
+                            android:id="@+id/radButton"
+                            android:layout_weight="1"
+                            android:textColor="#000"
+                            android:checked="false" />
+                    </RadioGroup>
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="fill_horizontal"
+                    android:layout_weight="2">
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="25"
+                        />
+
+                    <Button
+
+
+                        android:minHeight="0dp" android:minWidth="0dp"
+                        android:text="MC"
+                        android:id="@+id/mc"
+                        style="@style/FullscreenThemeButton"
+                        android:layout_weight="1"
+                        android:onClick="putMC" />
+
+                    <Button
+
+
+                        android:text="MR"
+                        android:id="@+id/mr"
+                        style="@style/FullscreenThemeButton"
+                        android:layout_weight="1"
+                        android:onClick="putMR" />
+
+                    <Button
+
+
+                        android:minHeight="0dp" android:minWidth="0dp"
+                        android:text="MS"
+                        android:id="@+id/ms"
+                        style="@style/FullscreenThemeButton"
+                        android:layout_weight="1"
+                        android:onClick="putMS" />
+
+                    <Button
+
+
+                        android:text="M+"
+                        android:id="@+id/mplus"
+                        style="@style/FullscreenThemeButton"
+                        android:layout_weight="1"
+                        android:onClick="putMp" />
+
+                    <Button
+
+
+                        android:text="M-"
+                        android:id="@+id/mminus"
+                        style="@style/FullscreenThemeButton"
+                        android:layout_weight="1"
+                        android:onClick="putMm" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill_horizontal">
+
+                <Button
+                    android:text="sinh"
+                    android:id="@+id/sinh"
+                    android:layout_weight="1"
+                    style="@style/FullscreenThemeButton"
+                    android:onClick="putSinh" />
+                <Button
+
+
+                    android:minHeight="0dp" android:minWidth="0dp"
+                    android:text="cosh"
+                    android:id="@+id/cosh"
+                    android:layout_weight="1"
+                    style="@style/FullscreenThemeButton"
+                    android:onClick="putCosh" />
+                <Button
+
+
+                    android:minHeight="0dp" android:minWidth="0dp"
+                    android:text="tanh"
+                    android:id="@+id/tanh"
+                    android:layout_weight="1"
+                    style="@style/FullscreenThemeButton"
+                    android:onClick="putTanh" />
+                <Button
+
+
+                    android:text="Exp"
+                    android:id="@+id/exp"
+                    android:layout_weight="1"
+                    style="@style/FullscreenThemeButton"
+                    android:onClick="putExp" />
+                <Button
+
+
+                    android:text="("
+                    android:id="@+id/obracket"
+                    android:layout_weight="1"
+                    style="@style/FullscreenThemeButton"
+                    android:onClick="putOpenBracket" />
+                <Button
+
+
+                    android:text=")"
+                    android:id="@+id/cbracket"
+                    android:layout_weight="1"
+                    style="@style/FullscreenThemeButton"
+                    android:onClick="putCloseBracket" />
+                <Button
+
+                    android:layout_weight="7"
+                    style="@style/FullscreenThemeRedButton"
+                    android:id="@+id/backspace"
+                    android:onClick="putBackspace" />
+
+                <Button
+                    android:text="C"
+                    android:id="@+id/clear"
+                    android:layout_weight="1"
+                    style="@style/FullscreenThemeRedButton"
+                    android:onClick="clearScreen" />
+                <Button
+
+
+                    android:text="+/-"
+                    android:id="@+id/signchange"
+                    android:layout_weight="1"
+                    style="@style/FullscreenThemeRedButton"
+                    android:onClick="putSign" />
+                <Button
+
+
+                    android:layout_weight="1"
+                    style="@style/FullscreenThemeButton"
+                    android:id="@+id/sqrt"
+                    android:onClick="putSQRT" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill_horizontal">
+
+                <Button
+
+
+                    android:layout_weight="1"
+                    style="@style/FullscreenThemeButton"
+                    android:id="@+id/sinhi"
+                    android:onClick="putSinhI" />
+                <Button
+
+
+                    android:layout_weight="1"
+                    style="@style/FullscreenThemeButton"
+                    android:id="@+id/coshi"
+                    android:onClick="putCoshI" />
+                <Button
+
+
+                    android:layout_weight="1"
+                    style="@style/FullscreenThemeButton"
+                    android:id="@+id/tanhi"
+                    android:onClick="putTanhI" />
+                <Button
+
+
+                    android:layout_weight="1"
+                    style="@style/FullscreenThemeButton"
+                    android:id="@+id/logx2"
+                    android:onClick="putLogX2" />
+                <Button
+
+
+                    android:text="ln"
+                    android:id="@+id/ln"
+                    android:layout_weight="1"
+                    style="@style/FullscreenThemeButton"
+                    android:onClick="putLn" />
+                <Button
+
+
+                    android:text="log"
+                    android:id="@+id/log"
+                    android:layout_weight="1"
+                    style="@style/FullscreenThemeButton"
+                    android:onClick="putLog" />
+                <Button
+
+
+                    android:text="7"
+                    android:id="@+id/seven"
+                    android:layout_weight="1"
+                    style="@style/FullscreenThemeButton"
+                    android:onClick="putNumber" />
+                <Button
+
+
+                    android:text="8"
+                    android:id="@+id/eight"
+                    android:layout_weight="1"
+                    style="@style/FullscreenThemeButton"
+                    android:onClick="putNumber" />
+                <Button
+
+
+                    android:text="9"
+                    android:id="@+id/nine"
+                    style="@style/FullscreenThemeButton"
+                    android:layout_weight="1"
+                    android:onClick="putNumber" />
+                <Button
+
+
+                    android:id="@+id/division"
+                    android:layout_weight="1"
+                    style="@style/FullscreenThemeButton"
+                    android:text="/"
+                    android:onClick="putBinaryOperator" />
+                <Button
+
+
+                    android:text="%"
+                    android:id="@+id/percentage"
+                    android:layout_weight="1"
+                    style="@style/FullscreenThemeButton"
+                    android:onClick="putPercent" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill_horizontal">
+                <Button
+
+
+                    android:layout_weight="1"
+                    style="@style/FullscreenThemeButton"
+                    android:id="@+id/pie"
+                    android:onClick="putPie" />
+                <Button
+
+
+                    android:text="e"
+                    android:id="@+id/e"
+                    android:layout_weight="1"
+                    style="@style/FullscreenThemeButton"
+                    android:onClick="putE" />
+                <Button
+
+
+                    android:text="n!"
+                    android:id="@+id/nfact"
+                    android:layout_weight="1"
+                    style="@style/FullscreenThemeButton"
+                    android:onClick="putFact" />
+                <Button
+
+
+                    android:layout_weight="1"
+                    style="@style/FullscreenThemeButton"
+                    android:id="@+id/logxy"
+                    android:onClick="putLogXY" />
+                <Button
+
+
+                    android:layout_weight="1"
+                    style="@style/FullscreenThemeButton"
+                    android:id="@+id/epowx"
+                    android:onClick="putEPowX" />
+                <Button
+
+
+                    android:layout_weight="1"
+                    style="@style/FullscreenThemeButton"
+                    android:id="@+id/tenpowx"
+                    android:onClick="putTenPowX" />
+                <Button
+
+
+                    android:text="4"
+                    android:id="@+id/four"
+                    android:layout_weight="1"
+                    style="@style/FullscreenThemeButton"
+                    android:onClick="putNumber" />
+                <Button
+
+
+                    android:text="5"
+                    android:id="@+id/five"
+                    android:layout_weight="1"
+                    style="@style/FullscreenThemeButton"
+                    android:onClick="putNumber" />
+                <Button
+
+
+                    android:text="6"
+                    android:id="@+id/six"
+                    android:layout_weight="1"
+                    style="@style/FullscreenThemeButton"
+                    android:onClick="putNumber" />
+                <Button
+
+
+                    android:text="*"
+                    android:id="@+id/mult"
+                    android:layout_weight="1"
+                    style="@style/FullscreenThemeButton"
+                    android:onClick="putBinaryOperator" />
+                <Button
+
+
+                    android:text="1/x"
+                    android:id="@+id/reciprocal"
+                    android:layout_weight="1"
+                    style="@style/FullscreenThemeButton"
+                    android:onClick="putReciprocal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill_horizontal">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="64"
+                    android:layout_marginRight="2dp">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        >
+                        <Button
+
+
+                            android:text="sin"
+                            android:id="@+id/sin"
+                            android:layout_weight="1"
+                            style="@style/FullscreenThemeButton"
+                            android:onClick="putSin" />
+                        <Button
+
+
+                            android:text="cos"
+                            android:id="@+id/cos"
+                            android:layout_weight="1"
+                            style="@style/FullscreenThemeButton"
+                            android:onClick="putCos" />
+                        <Button
+
+
+                            android:text="tan"
+                            android:id="@+id/tan"
+                            android:layout_weight="1"
+                            style="@style/FullscreenThemeButton"
+                            android:onClick="putTan" />
+                        <Button
+
+
+                            android:layout_weight="1"
+                            style="@style/FullscreenThemeButton"
+                            android:id="@+id/ythpow"
+                            android:onClick="putXPowY" />
+                        <Button
+
+
+                            android:layout_weight="1"
+                            style="@style/FullscreenThemeButton"
+                            android:id="@+id/cube"
+                            android:onClick="putCube" />
+                        <Button
+
+
+                            android:layout_weight="1"
+                            style="@style/FullscreenThemeButton"
+                            android:id="@+id/sqr"
+                            android:onClick="putSqr" />
+                        <Button
+
+
+                            android:text="1"
+                            android:id="@+id/one"
+                            android:layout_weight="1"
+                            style="@style/FullscreenThemeButton"
+                            android:onClick="putNumber" />
+                        <Button
+
+
+                            android:text="2"
+                            android:id="@+id/two"
+                            android:layout_weight="1"
+                            style="@style/FullscreenThemeButton"
+                            android:onClick="putNumber" />
+                        <Button
+
+
+                            android:text="3"
+                            android:id="@+id/three"
+                            android:layout_weight="1"
+                            style="@style/FullscreenThemeButton"
+                            android:onClick="putNumber" />
+                        <Button
+
+
+                            android:text="-"
+                            android:id="@+id/subtract"
+                            android:layout_weight="1"
+                            style="@style/FullscreenThemeButton"
+                            android:onClick="putBinaryOperator" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill_horizontal">
+
+                        <Button
+
+
+                            android:layout_weight="1"
+                            style="@style/FullscreenThemeButton"
+                            android:id="@+id/sini"
+                            android:onClick="putSinI" />
+                        <Button
+
+
+                            android:layout_weight="1"
+                            style="@style/FullscreenThemeButton"
+                            android:id="@+id/cosi"
+                            android:onClick="putCosI" />
+                        <Button
+
+
+                            android:layout_weight="1"
+                            style="@style/FullscreenThemeButton"
+                            android:id="@+id/tani"
+                            android:onClick="putTanI" />
+                        <Button
+
+
+                            android:layout_weight="1"
+                            style="@style/FullscreenThemeButton"
+                            android:id="@+id/ythrt"
+                            android:onClick="putYthRT" />
+                        <Button
+
+
+                            android:layout_weight="1"
+                            style="@style/FullscreenThemeButton"
+                            android:id="@+id/cubert"
+                            android:onClick="putCubeRT" />
+                        <Button
+
+
+                            android:text="|x|"
+                            android:id="@+id/modx"
+                            android:layout_weight="1"
+                            style="@style/FullscreenThemeButton"
+                            android:onClick="putAbs" />
+                        <Button
+
+
+                            android:text="0"
+                            android:id="@+id/zero"
+                            android:layout_weight="6"
+                            style="@style/FullscreenThemeButton"
+                            android:onClick="putNumber" />
+                        <Button
+                            android:text="."
+                            android:id="@+id/point"
+                            android:layout_weight="1"
+                            style="@style/FullscreenThemeButton"
+                            android:onClick="putDecPoint" />
+                        <Button
+
+
+                            android:text="+"
+                            android:id="@+id/plus"
+                            android:layout_weight="1"
+                            style="@style/FullscreenThemeButton"
+                            android:onClick="putBinaryOperator" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="fill_parent"
+                    android:text="="
+                    android:id="@+id/equalto"
+                    android:layout_weight="1"
+
+                    style="@style/FullscreenThemeGreenButton"
+                    android:onClick="equalTo" />
+
+            </LinearLayout>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/hiddenText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:textSize="0dp"
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
+
+</RelativeLayout>

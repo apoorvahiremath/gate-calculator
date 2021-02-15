@@ -1,0 +1,71 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="buttonStyle">@style/FullscreenThemeButton</item>
+    </style>
+
+    <style name="FullscreenThemeButton" parent="@android:style/Widget.Button">
+        <!--    <item name="android:shadowColor">#FF0000</item>
+          <item name="android:shadowDx">0</item>
+           <item name="android:shadowDy">-1</item>
+           <item name="android:shadowRadius">0.2</item>-->
+        <item name="android:textSize">14dip</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:background">@drawable/all_buttons</item>
+        <item name="android:layout_marginLeft">4dp</item>
+        <item name="android:layout_marginTop">1dp</item>
+        <item name="android:layout_marginBottom">3dp</item>
+        <item name="android:layout_height">29dip</item>
+        <item name="android:layout_width">40dip</item>
+    </style>
+
+    <style name="FullscreenThemeRedButton" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/red_buttons</item>
+        <item name="android:textSize">14dip</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:layout_marginLeft">4dp</item>
+        <item name="android:layout_marginTop">1dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:layout_height">30dip</item>
+        <item name="android:layout_width">40dip</item>
+    </style>
+
+    <style name="FullscreenThemeGreenButton" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/button_selector</item>
+        <item name="android:textSize">14dip</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:layout_marginLeft">3dip</item>
+        <item name="android:layout_marginTop">2dip</item>
+        <item name="android:layout_marginBottom">3dip</item>
+        <item name="android:paddingTop">0dip</item>
+        <item name="android:paddingBottom">0dip</item>
+        <item name="android:paddingLeft">0dip</item>
+        <item name="android:paddingRight">0dip</item>
+
+    </style>
+
+    <style name="MainActivityButtons" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/round_buttons</item>
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">150dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:padding">10dip</item>
+        <item name="android:textSize">20dip</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowRadius">3</item>
+        <item name="android:shadowDx">3</item>
+        <item name="android:shadowDy">2</item>
+        <item name="android:shadowColor">@android:color/black</item>
+    </style>
+</resources>

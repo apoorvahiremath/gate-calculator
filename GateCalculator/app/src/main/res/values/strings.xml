@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">GATE Calculator</string>
+
+    <string name="modulo">mod</string>
+    <string name="degree">deg</string>
+    <string name="radian">rad</string>
+    <string name="mc">mc</string>
+    <string name="mr">mr</string>
+    <string name="ms">ms</string>
+    <string name="mplus">M+</string>
+    <string name="mminus">M-</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="para1">Allows you to perform basic and mathematical operations such as
+    modulus, square root, cube root, trigonometric, exponential, logarithmic, hyperbolic
+    functions etc.</string>
+    <string name="dos">
+        \u2022 Be sure to press [C] while starting new calculation.\n
+        \u2022 Try to use brackets when working with complex calculation.\n
+        \u2022 Predefined operations such as Pi, log, Exp, roots, powers are available to save your time.\n
+        \u2022 Use memory functions to calculate cumulative totals\n
+        \tMC : Clears the memory\n
+        \tMR : Recall value in memory\n
+        \tMS : Save value in memory\n
+        \tM+ : Adds currently displayed number on your calculator to the number in memory\n
+        \tM-  : Subtracts currently displayed number on your calculator to the number in memory \n
+        \u2022 Before performing any trigonometric operation, do check the unit of angle ie Deg or Rad.\n
+        \tNote: By default angle unit is set to Degree
+    </string>
+    <string name="dont">\u2022 Perform multiple operations without brackets. \n
+        \u2022 Leave parenthesis unmatched\n
+    </string>
+    <string name="limitation">\u2022 Keyboard operation is disabled.\n
+        \u2022 Supports inputs upto 9 digits. \n
+    </string>
+</resources>

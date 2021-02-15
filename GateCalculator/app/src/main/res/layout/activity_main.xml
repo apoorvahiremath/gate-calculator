@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="vertical"
+    tools:context="com.gatehelpline.apoorva.myapplication.myapplication.MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF029789"
+        android:layout_weight="1"
+        android:shadowRadius="3"
+        android:shadowDx="3"
+        android:shadowDy="2"
+        android:shadowColor="@android:color/black"
+        android:padding="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="GATE Calculator"
+            android:textStyle="bold"
+            android:id="@+id/textView"
+            android:layout_gravity="center_horizontal"
+            android:textSize="32dp"
+            android:textColor="#FFFFFF"
+            android:shadowRadius="3"
+            android:shadowDx="3"
+            android:shadowDy="2"
+            android:shadowColor="@android:color/black"
+            android:layout_weight="1"
+            android:fontFamily="serif"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="A Gate Exam Practice Calculator"
+            android:id="@+id/textView2"
+            android:layout_gravity="center_horizontal"
+            android:textSize="16dp"
+            android:textColor="#FFFFFF"
+            android:shadowRadius="3"
+            android:shadowDx="3"
+            android:shadowDy="2"
+            android:shadowColor="@android:color/black"
+            android:layout_weight="1"
+            android:fontFamily="serif"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <Button
+            style="@style/MainActivityButtons"
+            android:text="Instructions"
+            android:id="@+id/button1"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="30dp"
+            android:onClick="openInstruction"
+            android:fontFamily="serif"/>
+
+        <Button
+            style="@style/MainActivityButtons"
+            android:text="Calculator"
+            android:id="@+id/button2"
+            android:onClick="openCalc"
+            android:fontFamily="serif"/>
+
+    </LinearLayout>
+
+</LinearLayout>
